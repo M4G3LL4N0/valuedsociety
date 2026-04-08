@@ -1,16 +1,4 @@
-interface Pillar {
-  title: string;
-  description: string;
-}
-
-interface Trait {
-  name: string;
-}
-
-interface HomePageProps {
-  pillars: Pillar[];
-  traits: Trait[];
-}
+import type { Pillar, Trait, HomePageProps } from '../types';
 
 const pillars: Pillar[] = [
   {
@@ -45,13 +33,14 @@ const traits: Trait[] = [
   { name: "Community-mindedness" },
 ];
 
-import { HeroSection } from '../components/HeroSection';
-import { PillarsSection } from '../components/PillarsSection';
+import { HeroSection } from '../components/HeroSection.tsx';
+import { PillarsSection } from '../components/PillarsSection.tsx';
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
-      <HeroSection />
+      <section>
+        <HeroSection />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.20),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(234,179,8,0.12),transparent_25%)]" />
         <div className="relative mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <div className="max-w-4xl">
