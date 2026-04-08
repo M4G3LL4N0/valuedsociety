@@ -11,40 +11,28 @@ export default function WaitlistForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
+    
     const trimmed = email.trim();
-    if (!trimmed) {
+    const error = validateEmail(trimmed);
+    
+    if (error) {
       setStatus("error");
-      setMessage("Please enter your email.");
+      setMessage(error);
       return;
     }
 
     setStatus("loading");
     setMessage("");
 
-    try {
-      const response = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: trimmed }),
-      });
-
-      const data = (await response.json()) as { ok?: boolean; error?: string; message?: string };
-
-      if (!response.ok || !data.ok) {
-        setStatus("error");
-        setMessage(data.error || "Something went wrong.");
-        return;
-      }
-
+    const result = await submitWaitlist(trimmed);
+    
+    if (result.ok) {
       setStatus("success");
-      setMessage(data.message || "Successfully joined the waitlist.");
+      setMessage(result.message || "Successfully joined the waitlist.");
       setEmail("");
-    } catch {
+    } else {
       setStatus("error");
-      setMessage("Unable to submit right now.");
+      setMessage(result.error || "Something went wrong.");
     }
   }
 

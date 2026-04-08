@@ -1,26 +1,16 @@
 import { NextResponse } from "next/server";
-
-type WaitlistBody = {
-  email?: string;
-};
+import { validateEmail } from "@/lib/waitlist";
+import { WaitlistResponse } from "@/types/site";
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as WaitlistBody;
-    const email = body?.email?.trim();
+    const { email } = await request.json();
+    const trimmed = email?.trim();
 
-    if (!email) {
+    const error = validateEmail(trimmed);
+    if (error) {
       return NextResponse.json(
-        { ok: false, error: "Email is required." },
-        { status: 400 }
-      );
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { ok: false, error: "Invalid email address." },
+        { ok: false, error } satisfies WaitlistResponse,
         { status: 400 }
       );
     }
@@ -29,13 +19,13 @@ export async function POST(request: Request) {
       {
         ok: true,
         message: "Successfully joined the waitlist.",
-        email,
-      },
+        email: trimmed,
+      } satisfies WaitlistResponse,
       { status: 200 }
     );
   } catch {
     return NextResponse.json(
-      { ok: false, error: "Invalid request body." },
+      { ok: false, error: "Invalid request" } satisfies WaitlistResponse,
       { status: 400 }
     );
   }

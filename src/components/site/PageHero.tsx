@@ -1,12 +1,6 @@
 import type { ReactNode } from "react";
 
-type PageHeroProps = {
-  eyebrow?: string;
-  title: string;
-  subtitle?: string;
-  description?: string;
-  children?: ReactNode;
-};
+import { PageHeroProps } from "@/types/site";
 
 export default function PageHero({
   eyebrow,

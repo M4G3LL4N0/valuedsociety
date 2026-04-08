@@ -1,4 +1,27 @@
-import { Pillar, Step, Capability, Testimonial, FAQ } from "@/types/site";
+import { NavItem, Pillar, Step, Capability, Testimonial, FAQ, ProofItem } from "@/types/site";
+
+export const SITE_NAME = "ValuedSociety";
+export const SITE_DESCRIPTION = "A premium platform for structured human betterment — helping people become more grounded, trustworthy, useful, and community-minded.";
+
+export const NAV_ITEMS: NavItem[] = [
+  { href: "/about", label: "About" },
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/product", label: "Product" },
+  { href: "/investors", label: "Investors" },
+  { href: "/contact", label: "Contact" },
+];
+
+export const FOOTER_LINKS: NavItem[] = [
+  ...NAV_ITEMS,
+  { href: "/waitlist", label: "Waitlist" },
+];
+
+export const PROOF_ITEMS: ProofItem[] = [
+  { text: "Education for betterment, not therapy" },
+  { text: "Short-form practical lessons" },
+  { text: "Trait-based personal development" },
+  { text: "Real-world action loops" },
+];
 
 export const pillars: Pillar[] = [
   {

@@ -17,24 +17,15 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 text-sm text-white/55 md:flex md:items-center md:gap-8">
-          <Link href="/about" className="transition hover:text-white">
-            About
-          </Link>
-          <Link href="/how-it-works" className="transition hover:text-white">
-            How it works
-          </Link>
-          <Link href="/product" className="transition hover:text-white">
-            Product
-          </Link>
-          <Link href="/investors" className="transition hover:text-white">
-            Investors
-          </Link>
-          <Link href="/contact" className="transition hover:text-white">
-            Contact
-          </Link>
-          <Link href="/waitlist" className="transition hover:text-white">
-            Waitlist
-          </Link>
+          {FOOTER_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition hover:text-white"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </div>
     </footer>

@@ -75,12 +75,7 @@ const capabilities = [
   },
 ];
 
-const proof = [
-  "Education for betterment, not therapy",
-  "Short-form practical lessons",
-  "Trait-based personal development",
-  "Real-world action loops",
-];
+import { PROOF_ITEMS } from "@/lib/site";
 
 const testimonials = [
   {
@@ -216,12 +211,12 @@ function Hero() {
             </div>
 
             <div className="mt-14 grid gap-4 md:grid-cols-4">
-              {proof.map((item) => (
+              {PROOF_ITEMS.map((item) => (
                 <div
-                  key={item}
+                  key={item.text}
                   className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm text-white/72 backdrop-blur"
                 >
-                  {item}
+                  {item.text}
                 </div>
               ))}
             </div>

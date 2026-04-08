@@ -12,21 +12,15 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm text-white/68 md:flex">
-          <Link href="/about" className="transition hover:text-white">
-            About
-          </Link>
-          <Link href="/how-it-works" className="transition hover:text-white">
-            How it works
-          </Link>
-          <Link href="/product" className="transition hover:text-white">
-            Product
-          </Link>
-          <Link href="/investors" className="transition hover:text-white">
-            Investors
-          </Link>
-          <Link href="/contact" className="transition hover:text-white">
-            Contact
-          </Link>
+          {NAV_ITEMS.map((item) => (
+            <Link 
+              key={item.href}
+              href={item.href}
+              className="transition hover:text-white"
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <Link
