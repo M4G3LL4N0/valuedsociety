@@ -1,4 +1,13 @@
 import Link from "next/link";
+import Header from "@/components/site/Header";
+import Footer from "@/components/site/Footer";
+
+const proof = [
+  "Education for betterment, not therapy",
+  "Short-form practical lessons",
+  "Trait-based personal development",
+  "Real-world action loops",
+];
 
 const capabilities = [
   {
@@ -45,6 +54,8 @@ export default function ProductPage() {
         <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] [background-size:80px_80px]" />
       </div>
 
+      <Header />
+
       <section className="px-5 pt-6 md:px-8 md:pt-8">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(54,74,125,0.30),rgba(18,25,43,0.90)_36%,rgba(102,63,85,0.34)_100%)] shadow-[0_28px_90px_rgba(0,0,0,0.48)]">
           <div className="relative px-6 py-20 md:px-12 md:py-28 lg:px-16">
@@ -74,6 +85,17 @@ export default function ProductPage() {
                 >
                   How It Works
                 </Link>
+              </div>
+
+              <div className="mt-14 grid gap-4 md:grid-cols-4">
+                {proof.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm text-white/72 backdrop-blur"
+                  >
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -135,6 +157,8 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
