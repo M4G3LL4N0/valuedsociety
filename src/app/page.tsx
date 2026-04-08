@@ -7,6 +7,11 @@ interface Trait {
   name: string;
 }
 
+interface HomePageProps {
+  pillars: Pillar[];
+  traits: Trait[];
+}
+
 const pillars: Pillar[] = [
   {
     title: "Learn the basics most people miss",
@@ -155,10 +160,10 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-3">
               {traits.map((trait) => (
                 <span
-                  key={trait}
+                  key={trait.name}
                   className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200"
                 >
-                  {trait}
+                  {trait.name}
                 </span>
               ))}
             </div>
