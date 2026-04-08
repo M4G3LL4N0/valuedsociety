@@ -21,25 +21,19 @@ export default function Header() {
           <Link href="/product" className="transition hover:text-white">
             Product
           </Link>
-          <Link href="/waitlist" className="transition hover:text-white">
-            Waitlist
+          <Link href="/investors" className="transition hover:text-white">
+            Investors
+          </Link>
+          <Link href="/contact" className="transition hover:text-white">
+            Contact
           </Link>
         </nav>
 
-        <div className="hidden md:block">
-          <Link
-            href="/waitlist"
-            className="rounded-full border border-white/12 bg-[linear-gradient(135deg,#f5a56b_0%,#ee7f7d_48%,#ac84ff_100%)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(201,122,255,0.22)] transition hover:scale-[1.02]"
-          >
-            Join Waitlist
-          </Link>
-        </div>
-
         <Link
           href="/waitlist"
-          className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white/90 md:hidden"
+          className="rounded-full border border-white/12 bg-[linear-gradient(135deg,#f5a56b_0%,#ee7f7d_48%,#ac84ff_100%)] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(201,122,255,0.22)] transition hover:scale-[1.02]"
         >
-          Join
+          Join Waitlist
         </Link>
       </div>
     </header>

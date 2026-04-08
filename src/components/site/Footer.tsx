@@ -12,8 +12,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-4 text-sm leading-7 text-white/50">
-            A premium platform for structured human betterment — helping people
-            become more grounded, trustworthy, useful, and community-minded.
+            A premium platform for structured human betterment.
           </p>
         </div>
 
@@ -26,6 +25,12 @@ export default function Footer() {
           </Link>
           <Link href="/product" className="transition hover:text-white">
             Product
+          </Link>
+          <Link href="/investors" className="transition hover:text-white">
+            Investors
+          </Link>
+          <Link href="/contact" className="transition hover:text-white">
+            Contact
           </Link>
           <Link href="/waitlist" className="transition hover:text-white">
             Waitlist
