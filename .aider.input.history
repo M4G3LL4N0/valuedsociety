@@ -1,0 +1,17 @@
+
+# 2026-04-08 05:08:47.565323
++Venture: virtus
++State: broken
++Lane: repair
++
++Current mission:
++- repair build blockers
++- fix type/module/env issues
++- restore successful build and deploy
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
