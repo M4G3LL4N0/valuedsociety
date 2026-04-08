@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+// Load Inter font locally
+const inter = localFont({
+  src: [
+    {
+      path: '../public/fonts/Inter.var.woff2',
+      weight: '100 900',
+      style: 'normal',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: "Virtus | Become a Better Person",
