@@ -1,4 +1,13 @@
-const pillars = [
+interface Pillar {
+  title: string;
+  description: string;
+}
+
+interface Trait {
+  name: string;
+}
+
+const pillars: Pillar[] = [
   {
     title: "Learn the basics most people miss",
     description:
@@ -16,25 +25,28 @@ const pillars = [
   },
 ];
 
-const traits = [
-  "Forgiveness",
-  "Acceptance",
-  "Understanding",
-  "Responsibility",
-  "Patience",
-  "Compassion",
-  "Listening",
-  "Service",
-  "Reliability",
-  "Self-awareness",
-  "Humility",
-  "Community-mindedness",
+const traits: Trait[] = [
+  { name: "Forgiveness" },
+  { name: "Acceptance" },
+  { name: "Understanding" },
+  { name: "Responsibility" },
+  { name: "Patience" },
+  { name: "Compassion" },
+  { name: "Listening" },
+  { name: "Service" },
+  { name: "Reliability" },
+  { name: "Self-awareness" },
+  { name: "Humility" },
+  { name: "Community-mindedness" },
 ];
+
+import { HeroSection } from '../components/HeroSection';
+import { PillarsSection } from '../components/PillarsSection';
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
-      <section className="relative overflow-hidden border-b border-white/10">
+      <HeroSection />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.20),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(234,179,8,0.12),transparent_25%)]" />
         <div className="relative mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <div className="max-w-4xl">
@@ -73,21 +85,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <div className="grid gap-6 md:grid-cols-3">
-          {pillars.map((pillar) => (
-            <div
-              key={pillar.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
-            >
-              <h2 className="text-2xl font-semibold">{pillar.title}</h2>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                {pillar.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <PillarsSection pillars={pillars} />
 
       <section
         id="how-it-works"
