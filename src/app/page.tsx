@@ -1,4 +1,6 @@
-const pillars = [
+import type { Pillar } from "@/types/content";
+
+const pillars: Pillar[] = [
   {
     title: "Learn what actually matters",
     description:
@@ -89,7 +91,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="how-it-works" className="border-y border-white/10 bg-black/20">
+      <section
+        id="how-it-works"
+        className="border-y border-white/10 bg-black/20"
+      >
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.2em] text-blue-200/80">
@@ -107,7 +112,87 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="waitlist" className="border-t border-white/10 bg-white/[0.03]">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_.9fr]">
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-amber-200/80">
+              Core growth areas
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">
+              Better traits create better lives.
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              ValuedSociety is built around the qualities that make people more
+              trustworthy, compassionate, stable, and valuable in everyday
+              life.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {traits.map((trait) => (
+                <span
+                  key={trait}
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200"
+                >
+                  {trait}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-blue-400/10 via-white/5 to-amber-300/10 p-8">
+            <div className="rounded-[1.5rem] border border-white/10 bg-[#0b1628] p-6 shadow-2xl">
+              <p className="text-sm text-slate-400">Example insight</p>
+              <h3 className="mt-2 text-2xl font-semibold">
+                Your growth focus this week
+              </h3>
+
+              <div className="mt-6 space-y-5">
+                <div>
+                  <div className="mb-2 flex items-center justify-between text-sm">
+                    <span className="text-slate-300">Patience</span>
+                    <span className="text-blue-200">Needs work</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-white/10">
+                    <div className="h-2 w-[28%] rounded-full bg-blue-300" />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="mb-2 flex items-center justify-between text-sm">
+                    <span className="text-slate-300">Understanding</span>
+                    <span className="text-amber-200">Developing</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-white/10">
+                    <div className="h-2 w-[54%] rounded-full bg-amber-300" />
+                  </div>
+                </div>
+
+                <div>
+                  <div className="mb-2 flex items-center justify-between text-sm">
+                    <span className="text-slate-300">Reliability</span>
+                    <span className="text-emerald-200">Strong</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-white/10">
+                    <div className="h-2 w-[76%] rounded-full bg-emerald-300" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p className="text-sm leading-7 text-slate-300">
+                  Today’s action: before reacting defensively, pause for 10
+                  seconds and ask one clarifying question instead.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="waitlist"
+        className="border-t border-white/10 bg-white/[0.03]"
+      >
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-r from-blue-400/10 via-transparent to-amber-300/10 p-10 md:p-14">
             <div className="max-w-3xl">
