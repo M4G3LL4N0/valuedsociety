@@ -663,3 +663,145 @@
 +- do not make cosmetic-only changes
 +- make the project buildable
 +
+
+# 2026-04-08 16:24:19.356416
++Preserve the current ValuedSociety visuals exactly or as close as possible. Do not redesign the site. Do not change the visual style, color palette, spacing rhythm, hero layout, section composition, card styling, or premium warm-dark brand language except where absolutely necessary for consistency. This pass is strictly for architecture hardening, type safety, route reliability, content centralization, waitlist plumbing, and future scalability.
++
++Perform a full stabilization and cleanup pass across the current site with these goals:
++
++BUILD RELIABILITY
++Fix any brittle or inconsistent component/page patterns created during previous large generation passes.
++Ensure every route file is a valid module.
++Ensure every shared component is a valid module.
++Ensure App Router conventions are followed correctly.
++Ensure client/server component boundaries are correct.
++Prevent common prop mismatch issues like the PageHero subtitle/description mismatch from recurring.
++Remove any dead imports, invalid exports, or inconsistent naming.
++VISUAL PRESERVATION
++Do not materially change current visuals.
++Homepage should look the same after this pass.
++Internal pages should keep the same visual treatment they currently use.
++No redesigns, no aesthetic experiments, no restyling.
++CENTRALIZED TYPES + CONTENT
++Create or improve src/types/site.ts with clean shared types for:
++nav items
++footer links
++faq items
++testimonials
++proof items
++page hero props if helpful
++site page section content models if helpful
++Create or improve src/lib/site.ts so repeated site content is centralized:
++nav links
++footer links
++homepage proof strip items
++FAQ content
++testimonials
++company/site description text
++reusable page content where appropriate
++Refactor pages/components to consume centralized content where it improves maintainability without changing visible output.
++METADATA + SEO
++Create or improve src/lib/metadata.ts.
++Centralize metadata generation with reusable helpers for title/description/Open Graph.
++Ensure every page has clean metadata.
++Keep claims premium and strong, but grounded.
++Do not add unnecessary complexity.
++PAGEHERO / COMPONENT API HARDENING
++Make shared component prop APIs consistent and resilient.
++PageHero should safely support the current usage patterns across pages without causing future prop mismatch build errors.
++If multiple prop styles are currently used, support them safely or standardize them cleanly.
++Keep outputs visually unchanged.
++WAITLIST HARDENING
++Ensure WaitlistForm is a correct client component.
++Ensure the API route is a correct App Router route module.
++Add lightweight email validation.
++Add clean loading/success/error handling.
++Make the implementation build-safe without external services.
++Add src/lib/waitlist.ts if useful to isolate validation/submission helpers.
++Structure it so Supabase or another backend can be plugged in later with minimal rewriting.
++LAYOUT + SHELL CONSISTENCY
++Ensure all internal pages use a consistent shared shell pattern where appropriate.
++Reuse Header/Footer cleanly if beneficial.
++Keep the current visible appearance effectively the same.
++Avoid duplication where possible.
++CODEBASE CLEANUP
++Remove unnecessary duplicated literals when centralizing helps.
++Clean up import paths.
++Use strong TypeScript types.
++Avoid overengineering.
++Keep code straightforward, production-safe, and autobuilder-friendly.
++CONTENT QUALITY
++Keep copy premium, serious, and mission-led.
++Emphasize:
++education for betterment
++structured human betterment
++becoming more grounded, trustworthy, responsible, compassionate, and useful
++Do not drift into generic self-help tone.
++Do not weaken the brand voice.
++FINAL VALIDATION
++Before finishing:
++mentally trace imports/exports for all touched files
++ensure no file is left empty or half-generated
++ensure no page imports client-only APIs directly unless marked properly
++ensure no route/component remains “not a module”
++ensure no prop type mismatches remain in shared components
++ensure the project is cleaner and more stable than before while preserving visuals
++
++Implement directly. Do not ask questions. Do not propose options. Do the strongest cleanup/stabilization pass now without changing the visual design.
+
+# 2026-04-08 16:24:22.649121
++Venture: valuedsociety
++State: premium
++Lane: release
++
++Current mission:
++- refine premium design
++- improve strategic surfaces
++- deploy polished progress
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> valuedsociety@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++✓ Compiled successfully in 1845ms
++  Running TypeScript ...
++  Finished TypeScript in 1661ms ...
++  Collecting page data using 7 workers ...
++  Generating static pages using 7 workers (0/11) ...
++  Generating static pages using 7 workers (2/11) 
++  Generating static pages using 7 workers (5/11) 
++  Generating static pages using 7 workers (8/11) 
++✓ Generating static pages using 7 workers (11/11) in 171ms
++  Finalizing page optimization ...
++
++Route (app)
++┌ ○ /
++├ ○ /_not-found
++├ ○ /about
++├ ƒ /api/waitlist
++├ ○ /contact
++├ ○ /how-it-works
++├ ○ /investors
++├ ○ /product
++└ ○ /waitlist
++
++
++○  (Static)   prerendered as static content
++ƒ  (Dynamic)  server-rendered on demand
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
