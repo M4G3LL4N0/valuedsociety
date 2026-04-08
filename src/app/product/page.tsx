@@ -45,6 +45,8 @@ const traits = [
   "Community value",
 ];
 
+export const dynamic = 'force-dynamic'
+
 export default function ProductPage() {
   return (
     <main className="min-h-screen bg-[#050915] text-white">
