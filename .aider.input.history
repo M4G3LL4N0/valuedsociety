@@ -15,3 +15,419 @@
 +- fix root causes
 +- prefer deploy-worthy output
 +- avoid tiny cosmetic-only changes unless bundled with stronger progress
+
+# 2026-04-08 05:16:24.076013
++Venture: virtus
++State: foundation
++Lane: foundation
++
++Current mission:
++- complete essential routes
++- stabilize layout/homepage
++- improve core structure
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
+
+# 2026-04-08 07:32:02.220658
++Venture: virtus
++State: broken
++Lane: repair
++
++Current mission:
++- repair build blockers
++- fix type/module/env issues
++- restore successful build and deploy
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
+
+# 2026-04-08 09:30:33.273587
++Venture: virtus
++State: broken
++Lane: repair
++
++Current mission:
++- repair build blockers
++- fix type/module/env issues
++- restore successful build and deploy
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
+
+# 2026-04-08 09:33:16.313483
++Venture: virtus
++State: broken
++Lane: repair
++
++Current mission:
++- repair build blockers
++- fix type/module/env issues
++- restore successful build and deploy
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
+
+# 2026-04-08 10:32:22.331010
++Venture: virtus
++State: functional
++Lane: feature
++
++Current mission:
++- add meaningful product capability
++- strengthen UX flow
++- improve conversion surfaces
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> virtus@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++✓ Compiled successfully in 1575ms
++  Running TypeScript ...
++Failed to type check.
++
++./src/components/PillarsSection.tsx:2:10
++Type error: Module '"../app/page"' has no exported member 'Pillar'. Did you mean to use 'import Pillar from "../app/page"' instead?
++
++  [90m1 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m'react'[0m;
++[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mPillar[0m } [36mfrom[0m [32m'../app/page'[0m;
++  [90m  |[0m          [31m[1m^[0m
++  [90m3 |[0m
++  [90m4 |[0m [36minterface[0m [33mPillarsSectionProps[0m {
++  [90m5 |[0m   pillars: [33mPillar[0m[];
++Next.js build worker exited with code: 1 and signal: null
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
+
+# 2026-04-08 10:33:13.677871
++Venture: virtus
++State: functional
++Lane: feature
++
++Current mission:
++- add meaningful product capability
++- strengthen UX flow
++- improve conversion surfaces
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> virtus@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++✓ Compiled successfully in 6.4s
++  Running TypeScript ...
++Failed to type check.
++
++./src/components/PillarsSection.tsx:2:10
++Type error: Module '"../app/page"' has no exported member 'Pillar'. Did you mean to use 'import Pillar from "../app/page"' instead?
++
++  [90m1 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m'react'[0m;
++[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mPillar[0m } [36mfrom[0m [32m'../app/page'[0m;
++  [90m  |[0m          [31m[1m^[0m
++  [90m3 |[0m
++  [90m4 |[0m [36minterface[0m [33mPillarsSectionProps[0m {
++  [90m5 |[0m   pillars: [33mPillar[0m[];
++Next.js build worker exited with code: 1 and signal: null
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
+
+# 2026-04-08 11:01:46.749943
++Venture: virtus
++State: functional
++Lane: feature
++
++Current mission:
++- add meaningful product capability
++- strengthen UX flow
++- improve conversion surfaces
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> virtus@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++✓ Compiled successfully in 2.2s
++  Running TypeScript ...
++Failed to type check.
++
++./src/components/PillarsSection.tsx:2:10
++Type error: Module '"../app/page"' has no exported member 'Pillar'. Did you mean to use 'import Pillar from "../app/page"' instead?
++
++  [90m1 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m'react'[0m;
++[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mPillar[0m } [36mfrom[0m [32m'../app/page'[0m;
++  [90m  |[0m          [31m[1m^[0m
++  [90m3 |[0m
++  [90m4 |[0m [36minterface[0m [33mPillarsSectionProps[0m {
++  [90m5 |[0m   pillars: [33mPillar[0m[];
++Next.js build worker exited with code: 1 and signal: null
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
+
+# 2026-04-08 11:02:11.868367
++Venture: virtus
++State: functional
++Lane: feature
++
++Current mission:
++- add meaningful product capability
++- strengthen UX flow
++- improve conversion surfaces
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> virtus@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++✓ Compiled successfully in 2.9s
++  Running TypeScript ...
++Failed to type check.
++
++./src/components/PillarsSection.tsx:2:10
++Type error: Module '"../app/page"' has no exported member 'Pillar'. Did you mean to use 'import Pillar from "../app/page"' instead?
++
++  [90m1 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m'react'[0m;
++[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mPillar[0m } [36mfrom[0m [32m'../app/page'[0m;
++  [90m  |[0m          [31m[1m^[0m
++  [90m3 |[0m
++  [90m4 |[0m [36minterface[0m [33mPillarsSectionProps[0m {
++  [90m5 |[0m   pillars: [33mPillar[0m[];
++Next.js build worker exited with code: 1 and signal: null
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
+
+# 2026-04-08 11:37:52.330104
++Venture: virtus
++State: functional
++Lane: feature
++
++Current mission:
++- add meaningful product capability
++- strengthen UX flow
++- improve conversion surfaces
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> virtus@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++✓ Compiled successfully in 2.5s
++  Running TypeScript ...
++Failed to type check.
++
++./src/components/PillarsSection.tsx:2:10
++Type error: Module '"../app/page"' has no exported member 'Pillar'. Did you mean to use 'import Pillar from "../app/page"' instead?
++
++  [90m1 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m'react'[0m;
++[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mPillar[0m } [36mfrom[0m [32m'../app/page'[0m;
++  [90m  |[0m          [31m[1m^[0m
++  [90m3 |[0m
++  [90m4 |[0m [36minterface[0m [33mPillarsSectionProps[0m {
++  [90m5 |[0m   pillars: [33mPillar[0m[];
++Next.js build worker exited with code: 1 and signal: null
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
+
+# 2026-04-08 11:39:05.445455
++Venture: virtus
++State: functional
++Lane: feature
++
++Current mission:
++- add meaningful product capability
++- strengthen UX flow
++- improve conversion surfaces
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> virtus@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++Turbopack build encountered 1 warnings:
++[next]/internal/font/google/inter_5972bc34.module.css
++Error while requesting resource
++There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
++
++Import trace:
++  Server Component:
++    [next]/internal/font/google/inter_5972bc34.module.css
++    [next]/internal/font/google/inter_5972bc34.js
++    ./src/app/layout.tsx
++
++
++
++> Build error occurred
++Error: Turbopack build failed with 1 errors:
++[next]/internal/font/google/inter_5972bc34.module.css
++next/font: error:
++Failed to fetch `Inter` from Google Fonts.
++
++Import trace:
++  Server Component:
++    [next]/internal/font/google/inter_5972bc34.module.css
++    [next]/internal/font/google/inter_5972bc34.js
++    ./src/app/layout.tsx
++
++
++    at ignore-listed frames
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
+
+# 2026-04-08 12:19:40.981821
++Venture: virtus
++State: functional
++Lane: feature
++
++Current mission:
++- add meaningful product capability
++- strengthen UX flow
++- improve conversion surfaces
++
++Rules:
++- make meaningful progress
++- preserve build stability
++- fix root causes
++- prefer deploy-worthy output
++- avoid tiny cosmetic-only changes unless bundled with stronger progress
++
++Build error context:
++
++> virtus@0.1.0 build
++> next build
++
++▲ Next.js 16.2.2 (Turbopack)
++
++  Creating an optimized production build ...
++Turbopack build encountered 1 warnings:
++[next]/internal/font/google/inter_5972bc34.module.css
++Error while requesting resource
++There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
++
++Import trace:
++  Server Component:
++    [next]/internal/font/google/inter_5972bc34.module.css
++    [next]/internal/font/google/inter_5972bc34.js
++    ./src/app/layout.tsx
++
++
++
++> Build error occurred
++Error: Turbopack build failed with 1 errors:
++[next]/internal/font/google/inter_5972bc34.module.css
++next/font: error:
++Failed to fetch `Inter` from Google Fonts.
++
++Import trace:
++  Server Component:
++    [next]/internal/font/google/inter_5972bc34.module.css
++    [next]/internal/font/google/inter_5972bc34.js
++    ./src/app/layout.tsx
++
++
++    at ignore-listed frames
++
++Rules:
++- fix the actual build error shown above
++- do not make cosmetic-only changes
++- make the project buildable
++
