@@ -1,6 +1,6 @@
 import type { Pillar, Trait, HomePageProps } from '../types';
 
-const pillars: Pillar[] = [
+const defaultPillars: Pillar[] = [
   {
     title: "Learn the basics most people miss",
     description:
@@ -18,7 +18,7 @@ const pillars: Pillar[] = [
   },
 ];
 
-const traits: Trait[] = [
+const defaultTraits: Trait[] = [
   { name: "Forgiveness" },
   { name: "Acceptance" },
   { name: "Understanding" },
@@ -33,10 +33,10 @@ const traits: Trait[] = [
   { name: "Community-mindedness" },
 ];
 
-import { HeroSection } from '../components/HeroSection.tsx';
-import { PillarsSection } from '../components/PillarsSection.tsx';
+import { HeroSection } from '../components/HeroSection';
+import { PillarsSection } from '../components/PillarsSection';
 
-export default function HomePage() {
+export default function HomePage({ pillars, traits }: HomePageProps) {
   return (
     <main className="min-h-screen bg-[#07111f] text-white">
       <section>
@@ -79,7 +79,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <PillarsSection pillars={pillars} />
+      <PillarsSection pillars={pillars || defaultPillars} />
 
       <section
         id="how-it-works"
@@ -147,7 +147,7 @@ export default function HomePage() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {traits.map((trait) => (
+              {(traits || defaultTraits).map((trait) => (
                 <span
                   key={trait.name}
                   className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200"
