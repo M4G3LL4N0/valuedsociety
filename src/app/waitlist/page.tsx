@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import PageHero from "@/components/site/PageHero";
 import WaitlistForm from "@/components/site/WaitlistForm";
 
-export const metadata: Metadata = {
-  title: "Waitlist | ValuedSociety",
-  description:
-    "Join the ValuedSociety waitlist and get early access to a platform designed to help you become more valuable in real life.",
-};
+import { createMetadata } from "@/lib/metadata";
+
+export const metadata = createMetadata({
+  title: "Waitlist",
+  description: "Join the ValuedSociety waitlist and get early access to a platform designed to help you become more valuable in real life.",
+  path: "/waitlist",
+});
 
 export default function WaitlistPage() {
   return (

@@ -14,7 +14,7 @@ export default function WaitlistForm({ className = "" }: WaitlistFormProps) {
   const [status, setStatus] = useState<WaitlistStatus>("idle");
   const [message, setMessage] = useState("");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const trimmed = email.trim();

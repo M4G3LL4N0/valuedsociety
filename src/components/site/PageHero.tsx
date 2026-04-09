@@ -9,7 +9,7 @@ export default function PageHero({
   description,
   children,
 }: PageHeroProps) {
-  const bodyText = subtitle || description || null;
+  const bodyText = subtitle ?? description ?? null;
 
   return (
     <section className="px-5 pt-6 md:px-8 md:pt-8">

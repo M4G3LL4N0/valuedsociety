@@ -2,7 +2,11 @@ import Link from "next/link";
 import type { NavLink } from "@/lib/site";
 import { FOOTER_LINKS } from "@/lib/site";
 
-export default function Footer() {
+type FooterProps = {
+  className?: string;
+};
+
+export default function Footer({ className = "" }: FooterProps) {
   return (
     <footer className="px-5 pb-16 md:px-8 md:pb-20">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-[2rem] border border-white/10 bg-[#0a0f1b]/80 px-6 py-8 md:flex-row md:items-end md:justify-between md:px-8">

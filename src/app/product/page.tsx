@@ -2,12 +2,7 @@ import Link from "next/link";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 
-const PROOF_ITEMS = [
-  "Education for betterment, not therapy",
-  "Short-form practical lessons",
-  "Trait-based personal development",
-  "Real-world action loops",
-];
+import { PROOF_ITEMS } from "@/lib/site";
 
 const capabilities = [
   {

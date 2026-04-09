@@ -542,6 +542,8 @@ function FAQSection() {
   );
 }
 
+"use client";
+
 function CTASection() {
   return (
     <section id="waitlist" className="px-5 pb-10 pt-8 md:px-8 md:pb-12 md:pt-10">
