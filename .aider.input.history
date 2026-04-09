@@ -865,3 +865,71 @@
 +- do not make cosmetic-only changes
 +- make the project buildable
 +
+
+# 2026-04-08 18:43:29.321506
++Venture: valuedsociety
++State: premium
++Lane: feature
++
++Current mission:
++- build the first real product workflow behind the website so users can actually use the product instead of only reading about it
++- add product routes, working screens, reusable components, and real interaction flows
++- create or improve the main dashboard/workspace and connect it to meaningful internal state or persistence
++- expand product depth with better entities, CRUD flows, onboarding, and stronger multi-step user journeys
++- add backend or API support where needed so the product is functional rather than static
++- strengthen auth, persistence, and typed service layers where appropriate
++- add revenue-readiness or operational structure such as pricing, onboarding, admin surfaces, or internal management flows
++- improve the venture so it is closer to a production-grade business, not just a prototype
++- deepen the product by implementing the next highest-ROI functional capability rather than cosmetic changes
++- replace shallow sections or placeholders with real workflows and real supporting logic
++
++Execution priorities:
++- build real website structure that supports the business
++- build real product functionality behind the website
++- improve user flows, onboarding, dashboards, CRUD, auth, APIs, persistence, and operational depth
++- strengthen business pages only when they support the product and conversion
++- make the product more complete and usable
++- move toward a mature, complex, production-grade product
++
++Hard rules:
++- do NOT do visual polish passes
++- do NOT do cosmetic redesigns
++- do NOT change styling just to make it prettier
++- do NOT spend time on animations, decorative effects, or subjective UI tweaks
++- do NOT do repair-only loops; assume hard repair is manual outside this run
++- prefer product depth, feature completeness, information architecture, and deployable functionality
++- keep changes coherent and production-oriented
+
+# 2026-04-08 18:43:29.332065
++Venture: valuedsociety
++State: premium
++Lane: feature
++
++Current mission:
++- build the first real product workflow behind the website so users can actually use the product instead of only reading about it
++- add product routes, working screens, reusable components, and real interaction flows
++- create or improve the main dashboard/workspace and connect it to meaningful internal state or persistence
++- expand product depth with better entities, CRUD flows, onboarding, and stronger multi-step user journeys
++- add backend or API support where needed so the product is functional rather than static
++- strengthen auth, persistence, and typed service layers where appropriate
++- add revenue-readiness or operational structure such as pricing, onboarding, admin surfaces, or internal management flows
++- improve the venture so it is closer to a production-grade business, not just a prototype
++- deepen the product by implementing the next highest-ROI functional capability rather than cosmetic changes
++- replace shallow sections or placeholders with real workflows and real supporting logic
++
++Execution priorities:
++- build real website structure that supports the business
++- build real product functionality behind the website
++- improve user flows, onboarding, dashboards, CRUD, auth, APIs, persistence, and operational depth
++- strengthen business pages only when they support the product and conversion
++- make the product more complete and usable
++- move toward a mature, complex, production-grade product
++
++Hard rules:
++- do NOT do visual polish passes
++- do NOT do cosmetic redesigns
++- do NOT change styling just to make it prettier
++- do NOT spend time on animations, decorative effects, or subjective UI tweaks
++- do NOT do repair-only loops; assume hard repair is manual outside this run
++- prefer product depth, feature completeness, information architecture, and deployable functionality
++- keep changes coherent and production-oriented
