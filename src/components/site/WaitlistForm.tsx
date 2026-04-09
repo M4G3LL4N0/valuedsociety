@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { validateEmail } from "@/lib/waitlist";
 
-type Status = "idle" | "loading" | "success" | "error";
+import type { WaitlistStatus } from "@/types/site";
 
 type WaitlistFormProps = {
   className?: string;
@@ -11,7 +11,7 @@ type WaitlistFormProps = {
 
 export default function WaitlistForm({ className = "" }: WaitlistFormProps) {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
+  const [status, setStatus] = useState<WaitlistStatus>("idle");
   const [message, setMessage] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {

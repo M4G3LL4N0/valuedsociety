@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-[#050915] text-white">
       <PageHero
         title="About ValuedSociety"
         description="Education for betterment - helping people become more grounded, trustworthy, and community-minded."

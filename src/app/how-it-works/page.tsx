@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import PageHero from "@/components/site/PageHero";
-import { steps } from "@/lib/site";
+import { STEPS } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "How It Works | ValuedSociety",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function HowItWorksPage() {
   return (
-    <main>
+    <main className="min-h-screen bg-[#050915] text-white">
       <PageHero
         title="How It Works"
         description="Our three-step system for practical human improvement"
@@ -27,7 +27,7 @@ export default function HowItWorksPage() {
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {steps.map((step) => (
+            {STEPS.map((step) => (
               <div
                 key={step.step}
                 className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-7"

@@ -43,8 +43,10 @@ export interface PageHeroProps {
   children?: React.ReactNode;
 }
 
+export type WaitlistStatus = 'idle' | 'loading' | 'success' | 'error';
+
 export interface WaitlistFormState {
-  status: 'idle' | 'loading' | 'success' | 'error';
+  status: WaitlistStatus;
   message: string;
 }
 

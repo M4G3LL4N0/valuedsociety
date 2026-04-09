@@ -4,7 +4,7 @@ type WaitlistRequest = {
   email?: string;
 };
 
-type WaitlistResponse = {
+export type WaitlistResponse = {
   ok: boolean;
   message?: string;
   error?: string;

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 
-const proof = [
+const PROOF_ITEMS = [
   "Education for betterment, not therapy",
   "Short-form practical lessons",
   "Trait-based personal development",
@@ -90,7 +90,7 @@ export default function ProductPage() {
               </div>
 
               <div className="mt-14 grid gap-4 md:grid-cols-4">
-                {proof.map((item) => (
+                {PROOF_ITEMS.map((item) => (
                   <div
                     key={item}
                     className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm text-white/72 backdrop-blur"

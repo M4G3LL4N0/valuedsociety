@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { NavLink } from "@/lib/site";
 import { FOOTER_LINKS } from "@/lib/site";
 
 export default function Footer() {

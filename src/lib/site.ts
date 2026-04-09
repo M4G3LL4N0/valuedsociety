@@ -42,7 +42,7 @@ export const PROOF_ITEMS: ProofItem[] = [
   { text: "Real-world action loops" },
 ];
 
-export const steps: StepItem[] = [
+export const STEPS: StepItem[] = [
   {
     step: "01",
     title: "Assess your current pattern",
