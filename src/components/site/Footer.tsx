@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FOOTER_LINKS } from "@/lib/site";
 
 export default function Footer() {
   return (

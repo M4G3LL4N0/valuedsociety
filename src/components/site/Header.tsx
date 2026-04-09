@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NAV_LINKS } from "@/lib/site";
 
 export default function Header() {
   return (
@@ -12,8 +13,8 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm text-white/68 md:flex">
-          {NAV_ITEMS.map((item) => (
-            <Link 
+          {NAV_LINKS.map((item) => (
+            <Link
               key={item.href}
               href={item.href}
               className="transition hover:text-white"

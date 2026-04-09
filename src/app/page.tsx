@@ -561,10 +561,6 @@ function CTASection() {
 
         <form 
           className="mt-8 flex max-w-2xl flex-col gap-4 sm:flex-row"
-          onSubmit={(e) => {
-            e.preventDefault()
-            // TODO: Add form submission logic
-          }}
         >
           <input
             type="email"

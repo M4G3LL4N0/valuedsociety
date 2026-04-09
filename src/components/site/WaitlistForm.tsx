@@ -1,20 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import { validateEmail } from "@/lib/waitlist";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export default function WaitlistForm() {
+type WaitlistFormProps = {
+  className?: string;
+};
+
+export default function WaitlistForm({ className = "" }: WaitlistFormProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    
+
     const trimmed = email.trim();
     const error = validateEmail(trimmed);
-    
+
     if (error) {
       setStatus("error");
       setMessage(error);
@@ -24,20 +29,40 @@ export default function WaitlistForm() {
     setStatus("loading");
     setMessage("");
 
-    const result = await submitWaitlist(trimmed);
-    
-    if (result.ok) {
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: trimmed }),
+      });
+
+      const data = (await res.json()) as {
+        ok?: boolean;
+        message?: string;
+        error?: string;
+      };
+
+      if (!res.ok || !data.ok) {
+        setStatus("error");
+        setMessage(data.error || "Something went wrong.");
+        return;
+      }
+
       setStatus("success");
-      setMessage(result.message || "Successfully joined the waitlist.");
+      setMessage(data.message || "Successfully joined the waitlist.");
       setEmail("");
-    } else {
+    } catch {
       setStatus("error");
-      setMessage(result.error || "Something went wrong.");
+      setMessage("Unable to submit right now.");
     }
   }
 
   return (
-    <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.94),rgba(8,13,24,0.98))] p-6 md:p-8">
+    <div
+      className={`rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.94),rgba(8,13,24,0.98))] p-6 md:p-8 ${className}`.trim()}
+    >
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:flex-row">
         <input
           type="email"
@@ -51,7 +76,7 @@ export default function WaitlistForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.28)] transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-70"
+          className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.28)] transition hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Submitting..." : "Request Invite"}
         </button>
