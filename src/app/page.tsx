@@ -100,24 +100,24 @@ const testimonials = [
 
 const faqs = [
   {
-    question: "Is this therapy?",
+    question: "Is ValuedSociety therapy?",
     answer:
-      "No. ValuedSociety is educational. It helps people understand and practice better human qualities, but it is not a clinical or therapeutic service.",
+      "No. ValuedSociety is an educational platform focused on practical skill-building. While it can complement therapy, it's not a replacement for clinical mental health services. We focus on teaching concrete skills for emotional intelligence, communication, and community contribution.",
   },
   {
-    question: "What makes this different from self-help apps?",
+    question: "How is this different from other self-help apps?",
     answer:
-      "Most self-help products are motivational or habit-focused. ValuedSociety is centered on character, behavior, judgment, and contribution — helping people become more valuable to themselves and others.",
+      "Unlike generic motivation apps, ValuedSociety provides a structured system focused on measurable growth in core human qualities. Our approach combines assessment, personalized education, and practical daily actions to create real behavioral change.",
   },
   {
-    question: "Who is this for?",
+    question: "Who is ValuedSociety for?",
     answer:
-      "Anyone who wants structured personal betterment, especially people who want to become more reliable, understanding, mature, and community-minded.",
+      "ValuedSociety is for anyone who wants to become more grounded, trustworthy, and valuable in their relationships and community. Whether you're looking to improve your emotional intelligence, become a better listener, or contribute more meaningfully, our system provides the tools and structure to help you grow.",
   },
   {
-    question: "What does the product actually do?",
+    question: "What does ValuedSociety actually do?",
     answer:
-      "It evaluates growth areas, teaches core human qualities in short lessons, and gives practical daily actions that help users improve in real life.",
+      "ValuedSociety provides a complete system for personal growth: 1) A detailed assessment identifies your key growth areas 2) Daily lessons teach practical skills for emotional intelligence and communication 3) Personalized exercises help you apply these skills in real life. The result is measurable improvement in how you think, act, and contribute.",
   },
 ];
 
@@ -200,12 +200,15 @@ function Hero() {
                 Join Waitlist
               </a>
               <a
-                href="#how-it-works"
+                href="#product"
                 className="rounded-full border border-white/12 bg-white/[0.05] px-7 py-3.5 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/[0.09]"
               >
-                How It Works
+                See How It Works
               </a>
             </div>
+            <p className="mt-4 text-sm text-white/50">
+              Early access spots are limited. Join now to secure your place.
+            </p>
 
             <div className="mt-14 grid gap-4 md:grid-cols-4">
               {PROOF_ITEMS.map((item) => (
@@ -233,7 +236,7 @@ function ProductExplanationSection() {
             Structured education for practical human betterment
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/65">
-            ValuedSociety combines assessment, education, and daily practice to help you:
+            ValuedSociety is a structured system for practical human betterment. Through assessment, education, and daily practice, we help you:
           </p>
         </div>
 
@@ -241,17 +244,17 @@ function ProductExplanationSection() {
           {[
             {
               title: "Understand your growth areas",
-              description: "Take a guided assessment to identify where you need most improvement.",
+              description: "Take our 15-minute assessment to identify your key areas for improvement across emotional, relational, and social dimensions.",
               icon: "📊"
             },
             {
               title: "Learn practical traits",
-              description: "Short lessons explain core human qualities in clear, actionable ways.",
+              description: "Daily 5-minute lessons break down complex human qualities into clear, actionable concepts you can apply immediately.",
               icon: "📚"
             },
             {
               title: "Practice daily improvement",
-              description: "Simple exercises help you build better habits and behaviors.",
+              description: "Personalized exercises help you build better habits through small, consistent actions tailored to your needs.",
               icon: "🏋️"
             }
           ].map((item) => (
