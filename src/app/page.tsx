@@ -193,15 +193,27 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              Become more valuable
+              Develop the traits that make people
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                in your relationships and community
+                trust, respect, and rely on you
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is a structured system that helps you develop core human qualities - like patience, understanding, and reliability - through daily lessons and practical exercises.
+              ValuedSociety is a structured education platform for measurable human betterment. Our assessment identifies your key growth areas, daily lessons teach practical skills, and exercises build real behavioral change.
             </p>
+
+            <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
+              <p>Unlike generic self-help or therapy, we focus exclusively on practical traits like:</p>
+              <div className="mt-2 grid grid-cols-2 gap-2">
+                {['Responsibility', 'Understanding', 'Reliability', 'Patience'].map(item => (
+                  <div key={item} className="flex items-center gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-[#f9965e]" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
               <p>ValuedSociety is an educational platform, not therapy. We focus on practical skill-building for emotional intelligence, communication, and community contribution.</p>
@@ -257,16 +269,36 @@ function Hero() {
 function ProductExplanationSection() {
   return (
     <section className="px-5 pt-8 md:px-8 md:pt-10">
-      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
-        <div className="max-w-3xl">
-          <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            A structured path to becoming more valuable
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-white/65">
-            ValuedSociety combines assessment, daily lessons, and practical exercises to help you develop the traits that matter most in real life. Here's how it works:
-          </p>
-          <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
-            <p>Your data is always private and secure. We never share or sell your information.</p>
+      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] ">
+        <div className="border-b border-white/10 p-6 md:p-8">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+              <span className="text-[#f9965e]">Measurable</span> human betterment
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              ValuedSociety combines psychological insights with structured practice to help you develop the traits that matter most in real life. Unlike vague self-help, we provide:
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 border-b border-white/10 md:grid-cols-3">
+          <div className="border-white/10 p-6 md:border-r md:p-8">
+            <h3 className="text-xl font-semibold text-white">Assessment</h3>
+            <p className="mt-3 text-sm leading-7 text-white/62">
+              15-minute evaluation identifies your key growth areas across communication, emotional regulation, and social awareness.
+            </p>
+          </div>
+          <div className="border-white/10 p-6 md:border-r md:p-8">
+            <h3 className="text-xl font-semibold text-white">Daily Lessons</h3>
+            <p className="mt-3 text-sm leading-7 text-white/62">
+              Bite-sized education focused on practical traits like patience, accountability, and humility - taught through real-world examples.
+            </p>
+          </div>
+          <div className="p-6 md:p-8">
+            <h3 className="text-xl font-semibold text-white">Practice</h3>
+            <p className="mt-3 text-sm leading-7 text-white/62">
+              Personalized exercises and progress tracking to build lasting behavioral change beyond abstract ideas.
+            </p>
           </div>
         </div>
 
@@ -651,15 +683,22 @@ function CTASection() {
       <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(34,44,72,0.88),rgba(28,34,47,0.52)_46%,rgba(152,86,96,0.28)_100%)] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.36)] md:p-12">
         <div className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.28em] text-white/42">
-            Early access
+            Limited Early Access
           </p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            Join the first generation of ValuedSociety.
+            Help shape the future of human betterment
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/68">
-            Get early access and help shape a platform built to make personal
-            betterment more practical, more personal, and more meaningful.
+            Join our founding group and get first access to structured tools for becoming more:
           </p>
+          <div className="mt-4 grid grid-cols-2 gap-3">
+            {['Grounded', 'Trustworthy', 'Understanding', 'Useful'].map(item => (
+              <div key={item} className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm">
+                <div className="h-2 w-2 rounded-full bg-[#f9965e]" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <form 
