@@ -193,14 +193,14 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              Become someone who matters
+              The structured system for
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                in every part of life
+                measurable human growth
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is the structured system for developing practical human skills - helping you become more grounded, trustworthy, and valuable in your relationships, work, and community.
+              ValuedSociety helps you develop the emotional intelligence, communication skills, and practical wisdom that make you more valuable in relationships, work, and community.
             </p>
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
@@ -733,8 +733,7 @@ function TestimonialSection() {
             A category people immediately understand once they see it.
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/65">
-            The strongest response to ValuedSociety is that it feels obvious in
-            retrospect: people need better frameworks for becoming better humans.
+            Early users report measurable improvements in their ability to communicate, understand others, and contribute value to their communities within weeks.
           </p>
         </div>
 
@@ -895,10 +894,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
           <div className="max-w-3xl">
             <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-              More than self-help. Better than therapy.
+              The gap no one teaches you to fill
             </h2>
             <p className="mt-5 text-lg leading-8 text-white/65">
-              ValuedSociety occupies a unique space - combining psychological insights with structured practice to help you develop practical human skills.
+              Most people want to be better partners, colleagues, and community members - but lack a clear path to develop the practical skills that build trust and create real impact.
             </p>
           </div>
 
@@ -1139,29 +1138,34 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
           <div className="max-w-3xl">
             <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-              A premium system for practical human improvement
+              A complete system for measurable growth
             </h2>
             <p className="mt-5 text-lg leading-8 text-white/65">
-              Our three-step system combines assessment, education, and guided action to help you improve in ways that are measurable, realistic, and useful in everyday life.
+              Unlike vague self-help, ValuedSociety gives you a structured path to develop the practical skills that matter most in real relationships and communities.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-4">
             {[
               {
                 step: "1",
-                title: "Personal Assessment",
-                description: "15-minute evaluation identifies your key growth areas across emotional intelligence, communication, and community contribution."
+                title: "Assess",
+                description: "15-minute evaluation of your emotional intelligence, communication patterns, and social awareness."
               },
               {
                 step: "2",
-                title: "Daily Skill Building",
-                description: "Short, practical lessons teach core human qualities like patience, understanding, and reliability in actionable steps."
+                title: "Learn",
+                description: "Daily micro-lessons that make complex human skills practical and actionable."
               },
               {
                 step: "3",
-                title: "Real-World Application",
-                description: "Personalized exercises help you apply skills in daily life, with progress tracking to measure improvement."
+                title: "Practice",
+                description: "Personalized exercises that build real-world competence through repetition."
+              },
+              {
+                step: "4",
+                title: "Improve",
+                description: "Trackable progress showing measurable growth in how you think, communicate, and relate."
               }
             ].map((item) => (
               <div
