@@ -193,15 +193,27 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              The structured system for
+              Become someone who matters
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                measurable human betterment
+                in every part of life
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety combines psychological insights with structured practice to help you develop the traits that matter most in real life. Through assessment, daily lessons, and real-world exercises, we make personal growth specific, measurable, and useful.
+              ValuedSociety is the structured system for developing practical human skills - helping you become more grounded, trustworthy, and valuable in your relationships, work, and community.
             </p>
+
+            <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
+              <p>Join thousands building essential skills like:</p>
+              <div className="mt-2 grid grid-cols-2 gap-2">
+                {['Clear communication', 'Emotional stability', 'Reliable judgment', 'Community contribution'].map(item => (
+                  <div key={item} className="flex items-center gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-[#f9965e]" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
               <p>Join thousands building essential skills like:</p>
@@ -878,6 +890,52 @@ export default function HomePage() {
 
       <Header />
       <Hero />
+
+      <section className="px-5 pt-8 md:px-8 md:pt-10">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
+              More than self-help. Better than therapy.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              ValuedSociety occupies a unique space - combining psychological insights with structured practice to help you develop practical human skills.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {[
+              {
+                title: "Structured Education",
+                description: "Clear frameworks for developing practical skills like patience, understanding, and reliability.",
+                icon: "📚"
+              },
+              {
+                title: "Personalized Growth",
+                description: "Tailored assessment and daily lessons focused on your specific growth areas.",
+                icon: "🎯"
+              },
+              {
+                title: "Measurable Progress",
+                description: "Trackable exercises and progress metrics to show real improvement.",
+                icon: "📈"
+              }
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-7"
+              >
+                <div className="text-2xl">{item.icon}</div>
+                <h3 className="mt-4 text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-white/62">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="px-5 pt-8 md:px-8 md:pt-10">
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
           <div className="grid gap-8 lg:grid-cols-2">
@@ -1077,7 +1135,51 @@ export default function HomePage() {
         </div>
       </section>
       <ProblemSolutionSection />
-      <HowItWorksSection />
+      <section className="px-5 pt-8 md:px-8 md:pt-10">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
+              A premium system for practical human improvement
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              Our three-step system combines assessment, education, and guided action to help you improve in ways that are measurable, realistic, and useful in everyday life.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                step: "1",
+                title: "Personal Assessment",
+                description: "15-minute evaluation identifies your key growth areas across emotional intelligence, communication, and community contribution."
+              },
+              {
+                step: "2",
+                title: "Daily Skill Building",
+                description: "Short, practical lessons teach core human qualities like patience, understanding, and reliability in actionable steps."
+              },
+              {
+                step: "3",
+                title: "Real-World Application",
+                description: "Personalized exercises help you apply skills in daily life, with progress tracking to measure improvement."
+              }
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-7"
+              >
+                <p className="text-sm font-semibold text-[#f1a774]">{item.step}</p>
+                <h3 className="mt-4 text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-white/62">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <CapabilitySection />
       <ProductPreviewSection />
       <TestimonialSection />
