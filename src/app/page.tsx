@@ -270,18 +270,18 @@ function ProductExplanationSection() {
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
           {[
             {
-              title: "Understand your growth areas",
-              description: "Take our 15-minute assessment to identify your key areas for improvement across emotional, relational, and social dimensions.",
+              title: "Personalized Assessment",
+              description: "Our 15-minute evaluation identifies your key growth areas across emotional intelligence, communication, and community contribution.",
               icon: "📊"
             },
             {
-              title: "Learn practical traits",
-              description: "Daily 5-minute lessons break down complex human qualities into clear, actionable concepts you can apply immediately.",
+              title: "Daily Skill Building",
+              description: "Short, practical lessons teach core human qualities like patience, understanding, and reliability in actionable steps.",
               icon: "📚"
             },
             {
-              title: "Practice daily improvement",
-              description: "Personalized exercises help you build better habits through small, consistent actions tailored to your needs.",
+              title: "Real-World Application",
+              description: "Personalized exercises help you apply skills in daily life, with progress tracking to measure improvement.",
               icon: "🏋️"
             }
           ].map((item) => (
