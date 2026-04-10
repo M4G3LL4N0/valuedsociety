@@ -933,3 +933,202 @@
 +- do NOT do repair-only loops; assume hard repair is manual outside this run
 +- prefer product depth, feature completeness, information architecture, and deployable functionality
 +- keep changes coherent and production-oriented
+
+# 2026-04-08 18:48:03.523967
++Venture: valuedsociety
++State: premium
++Lane: feature
++
++Current mission:
++- build the first real product workflow behind the website so users can actually use the product instead of only reading about it
++- add product routes, working screens, reusable components, and real interaction flows
++- create or improve the main dashboard/workspace and connect it to meaningful internal state or persistence
++- expand product depth with better entities, CRUD flows, onboarding, and stronger multi-step user journeys
++- add backend or API support where needed so the product is functional rather than static
++- strengthen auth, persistence, and typed service layers where appropriate
++- add revenue-readiness or operational structure such as pricing, onboarding, admin surfaces, or internal management flows
++- improve the venture so it is closer to a production-grade business, not just a prototype
++- deepen the product by implementing the next highest-ROI functional capability rather than cosmetic changes
++- replace shallow sections or placeholders with real workflows and real supporting logic
++
++Execution priorities:
++- build real website structure that supports the business
++- build real product functionality behind the website
++- improve user flows, onboarding, dashboards, CRUD, auth, APIs, persistence, and operational depth
++- strengthen business pages only when they support the product and conversion
++- make the product more complete and usable
++- move toward a mature, complex, production-grade product
++
++Hard rules:
++- do NOT do visual polish passes
++- do NOT do cosmetic redesigns
++- do NOT change styling just to make it prettier
++- do NOT spend time on animations, decorative effects, or subjective UI tweaks
++- do NOT do repair-only loops; assume hard repair is manual outside this run
++- prefer product depth, feature completeness, information architecture, and deployable functionality
++- keep changes coherent and production-oriented
+
+# 2026-04-08 18:48:03.524292
++Venture: valuedsociety
++State: premium
++Lane: feature
++
++Current mission:
++- build the first real product workflow behind the website so users can actually use the product instead of only reading about it
++- add product routes, working screens, reusable components, and real interaction flows
++- create or improve the main dashboard/workspace and connect it to meaningful internal state or persistence
++- expand product depth with better entities, CRUD flows, onboarding, and stronger multi-step user journeys
++- add backend or API support where needed so the product is functional rather than static
++- strengthen auth, persistence, and typed service layers where appropriate
++- add revenue-readiness or operational structure such as pricing, onboarding, admin surfaces, or internal management flows
++- improve the venture so it is closer to a production-grade business, not just a prototype
++- deepen the product by implementing the next highest-ROI functional capability rather than cosmetic changes
++- replace shallow sections or placeholders with real workflows and real supporting logic
++
++Execution priorities:
++- build real website structure that supports the business
++- build real product functionality behind the website
++- improve user flows, onboarding, dashboards, CRUD, auth, APIs, persistence, and operational depth
++- strengthen business pages only when they support the product and conversion
++- make the product more complete and usable
++- move toward a mature, complex, production-grade product
++
++Hard rules:
++- do NOT do visual polish passes
++- do NOT do cosmetic redesigns
++- do NOT change styling just to make it prettier
++- do NOT spend time on animations, decorative effects, or subjective UI tweaks
++- do NOT do repair-only loops; assume hard repair is manual outside this run
++- prefer product depth, feature completeness, information architecture, and deployable functionality
++- keep changes coherent and production-oriented
+
+# 2026-04-08 20:08:00.488621
++Perform a full stabilization, correction, and hardening pass on the ValuedSociety codebase.
++
++CRITICAL RULES:
++- DO NOT redesign anything
++- DO NOT change visuals, layout, spacing, colors, gradients, or typography hierarchy
++- DO NOT degrade UI quality
++- ONLY fix structure, correctness, and architecture
++- Preserve the exact visual output of the site
++
++PRIMARY GOAL:
++Make the entire codebase compile cleanly, be type-safe, and production-ready without visual changes.
++
++1. FIX ALL SYNTAX + JSX CORRUPTION
++- Scan all files for malformed JSX
++- Fix issues like stray `}`, broken tags, incomplete props, invalid fragments
++- Ensure every file parses correctly
++
++2. FIX ALL MODULE ERRORS
++- Ensure every file has a valid export, is not empty, and is a proper module
++- Fix all “is not a module”, missing exports, and broken imports
++
++3. SERVER vs CLIENT CORRECTION
++- NEVER pass functions from server to client components
++- Move all event handlers inside client components
++- Ensure all interactive components use "use client"
++- WaitlistForm must fully own submission logic
++- No onSubmit or handlers passed from pages
++
++4. STANDARDIZE SHARED DATA
++- Ensure src/lib/site.ts exports all used shared content:
++  - SITE_NAME
++  - SITE_DESCRIPTION
++  - NAV_LINKS
++  - FOOTER_LINKS
++  - PROOF_ITEMS as objects with `text`
++  - steps
++- Fix all mismatches across pages and components
++
++5. TYPE SAFETY PASS
++- Fix all TypeScript errors
++- Ensure props match usage everywhere
++- Make shared component APIs resilient
++- PageHero should safely support subtitle/description usage
++
++6. WAITLIST SYSTEM HARDENING
++- validateEmail must exist and be used
++- API route must return correct types
++- No invalid fields returned
++- Client handles loading, success, and error
++- No external dependencies required
++
++7. REMOVE DEAD / BROKEN CODE
++- remove unused imports
++- remove duplicated constants
++- remove unreachable code
++- remove invalid helpers
++
++8. LAYOUT CONSISTENCY
++- Ensure Header and Footer usage is consistent
++- Ensure all pages follow same structure
++- DO NOT change appearance
++
++9. METADATA STABILITY
++- Ensure metadata helpers work
++- Ensure imports from site.ts exist
++- Ensure no missing exports
++
++10. FINAL VALIDATION
++- mentally simulate npm run build
++- ensure no JSX errors, type errors, missing exports, server/client violations, or broken imports
++
++Do not ask questions.
++Do not propose options.
++Do the fixes directly.
++Keep visuals untouched.
++Make the build pass.
+
+# 2026-04-09 12:40:02.011888
++y
+
+# 2026-04-09 12:40:02.049900
++/run rm src/components/HeroSection.tsx
+
+# 2026-04-09 12:40:02.049975
++/run rm src/components/HeroSection.tsx
+
+# 2026-04-09 12:40:03.123707
++/run rm src/components/PillarsSection.tsx
+
+# 2026-04-09 12:40:03.123838
++/run rm src/components/PillarsSection.tsx
+
+# 2026-04-09 12:51:32.811257
++y
+
+# 2026-04-09 12:53:29.038162
++/exit
+
+# 2026-04-09 20:29:50.714740
++VENTURE: valuedsociety
++LANE: feature
++
++PRIMARY OBJECTIVE:
++Strengthen the ValuedSociety landing page and product story so it feels more complete, credible, and compelling while preserving the existing educational human-betterment positioning.
++
++CURRENT SLICE GOAL:
++Complete and harden the single-page marketing narrative in app/page.tsx by finishing the hero CTA area and then expanding the page into a fuller landing experience with clearer product framing, differentiation, trust-building proof, and a stronger conversion path to the waitlist.
++
++ACCEPTANCE CHECKS:
++- The page renders without syntax errors and the hero CTA block is complete.
++- The landing page includes a clear primary value proposition, supporting explanation, and at least one explicit conversion path.
++- The product story feels more specific than generic self-improvement and clearly explains what the platform actually does.
++- There is visible differentiation from therapy and standard self-help products.
++- At least one proof/trust section is present and the testimonials or proof items sound credible and aligned with the mission.
++- Multiple CTA points link to the intended waitlist section.
++
++FOLLOW-ON EXPANSION PROMPTS:
++- Finish the truncated Hero component so the primary CTA and secondary CTA are present, visually balanced, and scroll to the correct section.
++- Audit the page structure for missing sections after the hero; add any absent high-value sections such as problem framing, product explanation, transformation outcomes, and waitlist capture.
++- Clarify the product’s core promise in a single sentence that is specific, credible, and memorable; avoid vague self-help language.
++
++RULES:
++- make real code changes
++- deepen website and product
++- avoid decorative-only churn
++- keep build stability
++- preserve and improve venture direction
++- do not stop after tiny edits
++- make the venture more complete and useful

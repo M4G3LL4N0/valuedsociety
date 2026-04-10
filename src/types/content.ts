@@ -1,4 +1,4 @@
-export interface Pillar {
+export type Pillar = {
   title: string;
   description: string;
-}
+};

@@ -1,57 +1,26 @@
-export interface NavItem {
-  href: string;
+import type { ReactNode } from "react";
+
+export type NavLink = {
   label: string;
-}
+  href: string;
+};
 
-export interface Pillar {
-  title: string;
-  description: string;
-}
+export type ProofItem = {
+  text: string;
+};
 
-export interface Step {
+export type StepItem = {
   step: string;
   title: string;
   description: string;
-}
+};
 
-export interface Capability {
-  eyebrow: string;
-  title: string;
-  description: string;
-}
-
-export interface Testimonial {
-  quote: string;
-  name: string;
-  role: string;
-}
-
-export interface FAQ {
-  question: string;
-  answer: string;
-}
-
-export interface ProofItem {
-  text: string;
-}
-
-export interface PageHeroProps {
+export type PageHeroProps = {
   eyebrow?: string;
   title: string;
   subtitle?: string;
   description?: string;
-  children?: React.ReactNode;
-}
+  children?: ReactNode;
+};
 
-export type WaitlistStatus = 'idle' | 'loading' | 'success' | 'error';
-
-export interface WaitlistFormState {
-  status: WaitlistStatus;
-  message: string;
-}
-
-export interface WaitlistResponse {
-  ok: boolean;
-  message?: string;
-  error?: string;
-}
+export type WaitlistStatus = "idle" | "loading" | "success" | "error";
