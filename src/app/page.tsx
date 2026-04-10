@@ -189,7 +189,11 @@ function Hero() {
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is a structured system for practical human betterment. Through assessment, education, and daily practice, we help you develop core traits like patience, understanding, and reliability that improve every part of life.
+              ValuedSociety is the first structured system for measurable human betterment. Through personalized assessment, daily lessons, and practical exercises, we help you develop core traits like patience, understanding, and reliability that improve every relationship and interaction.
+            </p>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
+              Unlike generic self-help, we provide a clear framework for becoming more grounded, trustworthy, and valuable in your community.
             </p>
 
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -289,29 +293,51 @@ function ProductExplanationSection() {
   );
 }
 
-function MissionSection() {
+function ProblemSolutionSection() {
   return (
-    <section id="about" className="px-5 pt-8 md:px-8 md:pt-10">
+    <section id="problem" className="px-5 pt-8 md:px-8 md:pt-10">
       <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6 md:p-8">
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.28em] text-white/42">
-              Why this exists
+              The Problem
             </p>
             <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-              Better people create better outcomes.
+              Most people want to improve but lack a clear path
             </h2>
             <p className="mt-5 text-lg leading-8 text-white/65">
-              Most people are never given a structured system for becoming more
-              mature, responsible, forgiving, understanding, and useful. They
-              want to improve, but they lack a clear framework.
+              Without structured guidance, personal growth often becomes vague, inconsistent, and ineffective. People struggle to:
             </p>
-            <p className="mt-5 text-lg leading-8 text-white/65">
-              ValuedSociety turns personal betterment into something clearer,
-              calmer, more practical, and more scalable — so people can grow in
-              ways that matter beyond themselves.
-            </p>
+            <ul className="mt-5 space-y-3 text-lg leading-8 text-white/65">
+              <li>• Identify their key areas for improvement</li>
+              <li>• Turn abstract concepts into practical actions</li>
+              <li>• Measure progress in meaningful ways</li>
+              <li>• Stay consistent with their growth efforts</li>
+            </ul>
           </div>
+
+          <div className="max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/42">
+              The Solution
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+              A structured system for measurable growth
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              ValuedSociety provides a complete framework for practical human betterment:
+            </p>
+            <ul className="mt-5 space-y-3 text-lg leading-8 text-white/65">
+              <li>• Personalized assessment identifies key growth areas</li>
+              <li>• Daily lessons teach practical skills for emotional intelligence</li>
+              <li>• Actionable exercises help build better habits</li>
+              <li>• Progress tracking shows measurable improvement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
           <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-1">
             {pillars.map((pillar, index) => (
@@ -690,7 +716,7 @@ export default function HomePage() {
       <Header />
       <Hero />
       <ProductExplanationSection />
-      <MissionSection />
+      <ProblemSolutionSection />
       <HowItWorksSection />
       <CapabilitySection />
       <ProductPreviewSection />
