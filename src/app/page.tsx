@@ -193,15 +193,27 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              Develop the traits that make people
+              Become someone people
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                trust, respect, and rely on you
+                trust, respect, and rely on
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is a structured education platform for measurable human betterment. Our assessment identifies your key growth areas, daily lessons teach practical skills, and exercises build real behavioral change.
+              ValuedSociety is the first structured system for measurable human betterment. Through assessment, daily lessons, and practical exercises, we help you develop the traits that matter most in real life.
             </p>
+
+            <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
+              <p>Unlike generic self-help, we focus exclusively on practical traits like:</p>
+              <div className="mt-2 grid grid-cols-2 gap-2">
+                {['Responsibility', 'Understanding', 'Reliability', 'Patience'].map(item => (
+                  <div key={item} className="flex items-center gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-[#f9965e]" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
               <p>Unlike generic self-help or therapy, we focus exclusively on practical traits like:</p>
@@ -238,14 +250,22 @@ function Hero() {
             </div>
 
             <div className="mt-10 flex flex-col items-center gap-4">
-              <a
-                href="#waitlist"
-                className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.26)] transition hover:scale-[1.02]"
-              >
-                Join Waitlist
-              </a>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="#waitlist"
+                  className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.26)] transition hover:scale-[1.02]"
+                >
+                  Join Waitlist
+                </a>
+                <a
+                  href="#how-it-works"
+                  className="rounded-full border border-white/12 bg-white/[0.05] px-7 py-3.5 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/[0.09]"
+                >
+                  How It Works
+                </a>
+              </div>
               <p className="max-w-2xl text-center text-sm text-white/50">
-                ValuedSociety combines assessment, daily lessons, and practical exercises to help you become more grounded, trustworthy, and valuable in your relationships and community.
+                Be part of the first group shaping a platform focused on real human betterment.
               </p>
             </div>
 
@@ -260,6 +280,56 @@ function Hero() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyItMattersSection() {
+  return (
+    <section className="px-5 pt-8 md:px-8 md:pt-10">
+      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
+        <div className="max-w-3xl">
+          <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+            Why human betterment matters
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-white/65">
+            In a world of increasing complexity, the ability to think clearly, communicate effectively, and act responsibly has never been more important. Yet most people lack structured guidance for developing these essential skills.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-5 lg:grid-cols-3">
+          {[
+            {
+              title: "The Problem",
+              description: "Without clear guidance, personal growth often becomes vague, inconsistent, and ineffective.",
+              icon: "❓"
+            },
+            {
+              title: "The Opportunity",
+              description: "Structured education can help people develop practical skills for better relationships and community contribution.",
+              icon: "💡"
+            },
+            {
+              title: "The Solution",
+              description: "ValuedSociety provides a complete framework for measurable human betterment.",
+              icon: "✅"
+            }
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-7"
+            >
+              <div className="text-2xl">{item.icon}</div>
+              <h3 className="mt-4 text-2xl font-semibold text-white">
+                {item.title}
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-white/62">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -768,6 +838,7 @@ export default function HomePage() {
 
       <Header />
       <Hero />
+      <WhyItMattersSection />
       <ProductExplanationSection />
       <ProblemSolutionSection />
       <HowItWorksSection />
