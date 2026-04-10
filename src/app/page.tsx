@@ -193,9 +193,9 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              The structured system for
+              Become someone who
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                measurable human growth
+                truly matters
               </span>
             </h1>
 
@@ -203,17 +203,42 @@ function Hero() {
               ValuedSociety helps you develop the emotional intelligence, communication skills, and practical wisdom that make you more valuable in relationships, work, and community.
             </p>
 
-            <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
-              <p>Join thousands building essential skills like:</p>
-              <div className="mt-2 grid grid-cols-2 gap-2">
-                {['Clear communication', 'Emotional stability', 'Reliable judgment', 'Community contribution'].map(item => (
-                  <div key={item} className="flex items-center gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#f9965e]" />
-                    <span>{item}</span>
-                  </div>
-                ))}
+            <div className="mt-10 flex flex-col items-center gap-4">
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="#waitlist"
+                  className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.26)] transition hover:scale-[1.02]"
+                >
+                  Join Waitlist
+                </a>
+                <a
+                  href="#how-it-works"
+                  className="rounded-full border border-white/12 bg-white/[0.05] px-7 py-3.5 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/[0.09]"
+                >
+                  How It Works
+                </a>
               </div>
+              <p className="max-w-2xl text-center text-sm text-white/50">
+                Be part of the first group shaping a platform focused on real human betterment.
+              </p>
             </div>
+
+            <div className="mt-14 grid gap-4 md:grid-cols-4">
+              {PROOF_ITEMS.map((item) => (
+                <div
+                  key={item.text}
+                  className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm text-white/72 backdrop-blur"
+                >
+                  {item.text}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
               <p>Join thousands building essential skills like:</p>
@@ -890,48 +915,44 @@ export default function HomePage() {
       <Header />
       <Hero />
 
-      <section className="px-5 pt-8 md:px-8 md:pt-10">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
-          <div className="max-w-3xl">
-            <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-              The gap no one teaches you to fill
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-white/65">
-              Most people want to be better partners, colleagues, and community members - but lack a clear path to develop the practical skills that build trust and create real impact.
-            </p>
-          </div>
+      <section id="problem" className="px-5 pt-8 md:px-8 md:pt-10">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-6 md:p-8">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.28em] text-white/42">
+                The Problem
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+                Most people want to improve but lack a clear path
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-white/65">
+                Without structured guidance, personal growth often becomes vague, inconsistent, and ineffective. People struggle to:
+              </p>
+              <ul className="mt-5 space-y-3 text-lg leading-8 text-white/65">
+                <li>• Identify their key areas for improvement</li>
+                <li>• Turn abstract concepts into practical actions</li>
+                <li>• Measure progress in meaningful ways</li>
+                <li>• Stay consistent with their growth efforts</li>
+              </ul>
+            </div>
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-3">
-            {[
-              {
-                title: "Structured Education",
-                description: "Clear frameworks for developing practical skills like patience, understanding, and reliability.",
-                icon: "📚"
-              },
-              {
-                title: "Personalized Growth",
-                description: "Tailored assessment and daily lessons focused on your specific growth areas.",
-                icon: "🎯"
-              },
-              {
-                title: "Measurable Progress",
-                description: "Trackable exercises and progress metrics to show real improvement.",
-                icon: "📈"
-              }
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-7"
-              >
-                <div className="text-2xl">{item.icon}</div>
-                <h3 className="mt-4 text-2xl font-semibold text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-white/62">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+            <div className="max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.28em] text-white/42">
+                The Solution
+              </p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+                A structured system for measurable growth
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-white/65">
+                ValuedSociety provides a complete framework for practical human betterment:
+              </p>
+              <ul className="mt-5 space-y-3 text-lg leading-8 text-white/65">
+                <li>• Personalized assessment identifies key growth areas</li>
+                <li>• Daily lessons teach practical skills for emotional intelligence</li>
+                <li>• Actionable exercises help build better habits</li>
+                <li>• Progress tracking shows measurable improvement</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -1134,14 +1155,14 @@ export default function HomePage() {
         </div>
       </section>
       <ProblemSolutionSection />
-      <section className="px-5 pt-8 md:px-8 md:pt-10">
+      <section id="workflow" className="px-5 pt-8 md:px-8 md:pt-10">
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
           <div className="max-w-3xl">
             <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-              A complete system for measurable growth
+              Your path to becoming more valuable
             </h2>
             <p className="mt-5 text-lg leading-8 text-white/65">
-              Unlike vague self-help, ValuedSociety gives you a structured path to develop the practical skills that matter most in real relationships and communities.
+              ValuedSociety's structured system helps you develop practical skills through assessment, education, and real-world application.
             </p>
           </div>
 
@@ -1150,29 +1171,33 @@ export default function HomePage() {
               {
                 step: "1",
                 title: "Assess",
-                description: "15-minute evaluation of your emotional intelligence, communication patterns, and social awareness."
+                description: "15-minute evaluation identifies your key growth areas across emotional intelligence, communication, and community contribution.",
+                icon: "📊"
               },
               {
                 step: "2",
                 title: "Learn",
-                description: "Daily micro-lessons that make complex human skills practical and actionable."
+                description: "Daily micro-lessons teach core human qualities like patience, understanding, and reliability in actionable steps.",
+                icon: "📚"
               },
               {
                 step: "3",
                 title: "Practice",
-                description: "Personalized exercises that build real-world competence through repetition."
+                description: "Personalized exercises help you apply skills in daily life, with progress tracking to measure improvement.",
+                icon: "🏋️"
               },
               {
                 step: "4",
                 title: "Improve",
-                description: "Trackable progress showing measurable growth in how you think, communicate, and relate."
+                description: "Trackable progress shows measurable growth in how you think, communicate, and relate to others.",
+                icon: "📈"
               }
             ].map((item) => (
               <div
                 key={item.step}
                 className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.03))] p-7"
               >
-                <p className="text-sm font-semibold text-[#f1a774]">{item.step}</p>
+                <div className="text-2xl">{item.icon}</div>
                 <h3 className="mt-4 text-2xl font-semibold text-white">
                   {item.title}
                 </h3>
