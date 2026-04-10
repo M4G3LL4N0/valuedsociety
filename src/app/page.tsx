@@ -193,15 +193,27 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              Become someone who matters
+              The structured system for
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                in your relationships and community
+                measurable human betterment
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is the structured system for developing practical human skills - helping you become more grounded, trustworthy, and valuable in real life. Through assessment, daily lessons, and real-world exercises, we make personal growth specific, measurable, and useful.
+              ValuedSociety combines psychological insights with structured practice to help you develop the traits that matter most in real life. Through assessment, daily lessons, and real-world exercises, we make personal growth specific, measurable, and useful.
             </p>
+
+            <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
+              <p>Join thousands building essential skills like:</p>
+              <div className="mt-2 grid grid-cols-2 gap-2">
+                {['Clear communication', 'Emotional stability', 'Reliable judgment', 'Community contribution'].map(item => (
+                  <div key={item} className="flex items-center gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-[#f9965e]" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
               <p>Join thousands building essential skills like:</p>
@@ -913,8 +925,112 @@ export default function HomePage() {
         </div>
       </section>
 
-      <WhyItMattersSection />
-      <ProductExplanationSection />
+      <section className="px-5 pt-8 md:px-8 md:pt-10">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div>
+              <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
+                Why generic self-help fails
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-white/65">
+                Most personal growth approaches are too vague to create lasting change. They lack:
+              </p>
+              <ul className="mt-5 space-y-3 text-lg leading-8 text-white/65">
+                <li>• Clear assessment of specific growth areas</li>
+                <li>• Structured education tailored to your needs</li>
+                <li>• Practical exercises for real-world application</li>
+                <li>• Measurable progress tracking</li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
+                How ValuedSociety works
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-white/65">
+                Our three-part system helps you develop practical human skills through structured education and real-world application.
+              </p>
+              <div className="mt-5 space-y-6">
+                {[
+                  {
+                    step: "1",
+                    title: "Personal Assessment",
+                    description: "15-minute evaluation identifies your key growth areas across emotional intelligence, communication, and community contribution."
+                  },
+                  {
+                    step: "2",
+                    title: "Daily Skill Building",
+                    description: "Short, practical lessons teach core human qualities like patience, understanding, and reliability in actionable steps."
+                  },
+                  {
+                    step: "3",
+                    title: "Real-World Application",
+                    description: "Personalized exercises help you apply skills in daily life, with progress tracking to measure improvement."
+                  }
+                ].map((item) => (
+                  <div key={item.step} className="flex gap-4">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-sm font-semibold text-[#f1a774]">
+                      {item.step}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-white/62">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-5 pt-8 md:px-8 md:pt-10">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+              Why now?
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              In a world of increasing complexity, the ability to think clearly, communicate effectively, and act responsibly has never been more important. Yet most people lack structured guidance for developing these essential skills.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {[
+              {
+                title: "The Problem",
+                description: "Without clear guidance, personal growth often becomes vague, inconsistent, and ineffective.",
+                icon: "❓"
+              },
+              {
+                title: "The Opportunity",
+                description: "Structured education can help people develop practical skills for better relationships and community contribution.",
+                icon: "💡"
+              },
+              {
+                title: "The Solution",
+                description: "ValuedSociety provides a complete framework for measurable human betterment.",
+                icon: "✅"
+              }
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-7"
+              >
+                <div className="text-2xl">{item.icon}</div>
+                <h3 className="mt-4 text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-white/62">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="px-5 pt-8 md:px-8 md:pt-10">
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
           <div className="max-w-3xl">
