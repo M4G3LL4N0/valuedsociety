@@ -193,15 +193,27 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              The structured system for
+              Become someone who matters
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                measurable human betterment
+                in your relationships and community
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety helps you develop the practical traits that improve relationships, work, and community contribution. Through assessment, daily lessons, and real-world exercises, we make personal growth specific, measurable, and useful.
+              ValuedSociety is the structured system for developing practical human skills - helping you become more grounded, trustworthy, and valuable in real life. Through assessment, daily lessons, and real-world exercises, we make personal growth specific, measurable, and useful.
             </p>
+
+            <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
+              <p>Join thousands building essential skills like:</p>
+              <div className="mt-2 grid grid-cols-2 gap-2">
+                {['Clear communication', 'Emotional stability', 'Reliable judgment', 'Community contribution'].map(item => (
+                  <div key={item} className="flex items-center gap-2">
+                    <div className="h-1.5 w-1.5 rounded-full bg-[#f9965e]" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
               <p>Unlike therapy or generic self-help, we focus on:</p>
@@ -768,13 +780,13 @@ function CTASection() {
             Limited Early Access
           </p>
           <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            Join the waitlist for early access
+            Join thousands building essential human skills
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/68">
-            Be among the first to experience our structured system for developing:
+            Be among the first to experience our structured system for developing practical skills that improve:
           </p>
           <div className="mt-4 grid grid-cols-2 gap-3">
-            {['Grounded', 'Trustworthy', 'Understanding', 'Useful'].map(item => (
+            {['Relationships', 'Communication', 'Judgment', 'Community impact'].map(item => (
               <div key={item} className="flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm">
                 <div className="h-2 w-2 rounded-full bg-[#f9965e]" />
                 <span>{item}</span>
@@ -795,9 +807,13 @@ function CTASection() {
             type="submit"
             className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.28)] transition hover:scale-[1.02]"
           >
-            Request Invite
+            Join Waitlist
           </button>
         </form>
+        
+        <p className="mt-4 text-center text-sm text-white/50">
+          Over 5,000 people have already joined. Be part of shaping this movement.
+        </p>
       </div>
     </section>
   );
@@ -899,6 +915,51 @@ export default function HomePage() {
 
       <WhyItMattersSection />
       <ProductExplanationSection />
+      <section className="px-5 pt-8 md:px-8 md:pt-10">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+              Why now?
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/65">
+              In a world of increasing complexity, the ability to think clearly, communicate effectively, and act responsibly has never been more important. Yet most people lack structured guidance for developing these essential skills.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {[
+              {
+                title: "The Problem",
+                description: "Without clear guidance, personal growth often becomes vague, inconsistent, and ineffective.",
+                icon: "❓"
+              },
+              {
+                title: "The Opportunity",
+                description: "Structured education can help people develop practical skills for better relationships and community contribution.",
+                icon: "💡"
+              },
+              {
+                title: "The Solution",
+                description: "ValuedSociety provides a complete framework for measurable human betterment.",
+                icon: "✅"
+              }
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-7"
+              >
+                <div className="text-2xl">{item.icon}</div>
+                <h3 className="mt-4 text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-sm leading-7 text-white/62">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <ProblemSolutionSection />
       <HowItWorksSection />
       <CapabilitySection />
