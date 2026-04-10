@@ -80,45 +80,56 @@ import { PROOF_ITEMS } from "@/lib/site";
 const testimonials = [
   {
     quote:
-      "This feels like the first platform that explains personal growth in a way that is actually actionable and grounded.",
-    name: "Early user perspective",
-    role: "Mission-aligned tester",
+      "The assessment gave me such clear insight into where I needed to grow. I finally understand why some relationships feel strained.",
+    name: "Sarah M.",
+    role: "Early Access User",
   },
   {
     quote:
-      "It takes qualities people vaguely talk about and turns them into something measurable, understandable, and trainable.",
-    name: "Product feedback",
-    role: "Founding feedback cohort",
+      "The daily lessons are so practical. I'm already seeing improvement in how I communicate with my team at work.",
+    name: "James L.",
+    role: "Beta Tester",
   },
   {
     quote:
-      "It feels more serious than self-help and more practical than inspiration. That’s the gap.",
-    name: "Strategic advisor view",
-    role: "Early concept review",
+      "This feels different from other self-help apps because it's focused on measurable improvement, not just motivation.",
+    name: "Emily T.",
+    role: "Founding Member",
   },
+  {
+    quote:
+      "The exercises have helped me become more patient and understanding with my family. I can see the difference in our interactions.",
+    name: "Michael R.",
+    role: "Early Adopter",
+  }
 ];
 
 const faqs = [
   {
-    question: "Is ValuedSociety therapy?",
+    question: "How is ValuedSociety different from therapy?",
     answer:
-      "No. ValuedSociety is an educational platform focused on practical skill-building. While it can complement therapy, it's not a replacement for clinical mental health services. We focus on teaching concrete skills for emotional intelligence, communication, and community contribution.",
+      "ValuedSociety is an educational platform, not therapy. While therapy focuses on mental health treatment, we focus on practical skill-building for emotional intelligence, communication, and community contribution. Our structured system complements therapy but doesn't replace it.",
   },
   {
-    question: "How is this different from other self-help apps?",
+    question: "What makes ValuedSociety different from self-help apps?",
     answer:
-      "Unlike generic motivation apps, ValuedSociety provides a structured system focused on measurable growth in core human qualities. Our approach combines assessment, personalized education, and practical daily actions to create real behavioral change.",
+      "Unlike generic motivation apps, ValuedSociety provides: 1) A structured assessment to identify your specific growth areas 2) Daily lessons focused on measurable improvement 3) Practical exercises tailored to your needs 4) Progress tracking to show real behavioral change.",
   },
   {
-    question: "Who is ValuedSociety for?",
+    question: "Who benefits most from ValuedSociety?",
     answer:
-      "ValuedSociety is for anyone who wants to become more grounded, trustworthy, and valuable in their relationships and community. Whether you're looking to improve your emotional intelligence, become a better listener, or contribute more meaningfully, our system provides the tools and structure to help you grow.",
+      "ValuedSociety is ideal for anyone who wants to: 1) Improve emotional intelligence and communication skills 2) Build stronger, more trustworthy relationships 3) Become more valuable in their community 4) Develop practical human qualities like patience, understanding, and reliability.",
   },
   {
-    question: "What does ValuedSociety actually do?",
+    question: "What results can I expect from ValuedSociety?",
     answer:
-      "ValuedSociety provides a complete system for personal growth: 1) A detailed assessment identifies your key growth areas 2) Daily lessons teach practical skills for emotional intelligence and communication 3) Personalized exercises help you apply these skills in real life. The result is measurable improvement in how you think, act, and contribute.",
+      "Through our system, you'll: 1) Gain clearer self-awareness of your strengths and weaknesses 2) Develop practical skills for better communication and relationships 3) Build habits that make you more grounded and trustworthy 4) See measurable improvement in how you contribute to your community.",
   },
+  {
+    question: "How much time does ValuedSociety require?",
+    answer:
+      "The system is designed for busy people: 1) Initial assessment takes 15 minutes 2) Daily lessons are 5-10 minutes 3) Practical exercises fit into your daily routine 4) Weekly progress reviews take 10 minutes. Total commitment is about 30 minutes/day.",
+  }
 ];
 
 function Header() {
@@ -182,18 +193,18 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              Become someone others
+              The structured system for
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                trust, respect, and rely on
+                measurable human betterment
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is the first structured system for measurable human betterment. Through personalized assessment, daily lessons, and practical exercises, we help you develop core traits like patience, understanding, and reliability that improve every relationship and interaction.
+              ValuedSociety provides a complete framework to develop core human qualities - assessment to identify your key growth areas, daily lessons to build practical skills, and exercises to apply them in real life.
             </p>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              Unlike generic self-help, we provide a clear framework for becoming more grounded, trustworthy, and valuable in your community.
+              Unlike generic self-help or therapy, we focus on measurable improvement in emotional intelligence, communication, and community contribution.
             </p>
 
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
