@@ -542,7 +542,6 @@ function FAQSection() {
   );
 }
 
-"use client";
 
 function CTASection() {
   return (
