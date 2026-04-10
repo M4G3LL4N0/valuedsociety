@@ -193,19 +193,19 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              The structured system for
+              Become more valuable
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                measurable human betterment
+                in your relationships and community
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety provides a complete framework to develop core human qualities - assessment to identify your key growth areas, daily lessons to build practical skills, and exercises to apply them in real life.
+              ValuedSociety is a structured system that helps you develop core human qualities - like patience, understanding, and reliability - through daily lessons and practical exercises.
             </p>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              Unlike generic self-help or therapy, we focus on measurable improvement in emotional intelligence, communication, and community contribution.
-            </p>
+            <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
+              <p>ValuedSociety is an educational platform, not therapy. We focus on practical skill-building for emotional intelligence, communication, and community contribution.</p>
+            </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {[
@@ -230,7 +230,7 @@ function Hero() {
                 href="#waitlist"
                 className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.26)] transition hover:scale-[1.02]"
               >
-                Join Waitlist - Limited Early Access
+                Join Waitlist
               </a>
               <p className="max-w-2xl text-center text-sm text-white/50">
                 ValuedSociety combines assessment, daily lessons, and practical exercises to help you become more grounded, trustworthy, and valuable in your relationships and community.
@@ -260,11 +260,14 @@ function ProductExplanationSection() {
       <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
         <div className="max-w-3xl">
           <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            A complete system for measurable growth
+            A structured path to becoming more valuable
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/65">
-            Unlike generic self-help, ValuedSociety provides a structured path to improvement through assessment, daily lessons, and practical exercises. Here's how it works:
+            ValuedSociety combines assessment, daily lessons, and practical exercises to help you develop the traits that matter most in real life. Here's how it works:
           </p>
+          <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-sm text-white/62">
+            <p>Your data is always private and secure. We never share or sell your information.</p>
+          </div>
         </div>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
