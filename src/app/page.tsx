@@ -182,17 +182,14 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              Become more valuable
+              Build the traits that make you
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                to yourself, to others, and to society.
+                more valuable in real life
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is education for betterment — a premium platform
-              built to help people understand, strengthen, and practice the
-              traits that make them more grounded, trustworthy, compassionate,
-              and useful in real life.
+              ValuedSociety is structured education for human betterment — helping you develop the practical traits that improve your relationships, judgment, and contribution to the world around you.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -200,13 +197,13 @@ function Hero() {
                 href="#waitlist"
                 className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.26)] transition hover:scale-[1.02]"
               >
-                Start Becoming Better
+                Join Waitlist
               </a>
               <a
-                href="#product"
+                href="#how-it-works"
                 className="rounded-full border border-white/12 bg-white/[0.05] px-7 py-3.5 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/[0.09]"
               >
-                Explore the Product
+                How It Works
               </a>
             </div>
 
@@ -221,6 +218,56 @@ function Hero() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProductExplanationSection() {
+  return (
+    <section className="px-5 pt-8 md:px-8 md:pt-10">
+      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
+        <div className="max-w-3xl">
+          <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
+            Structured education for practical human betterment
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-white/65">
+            ValuedSociety combines assessment, education, and daily practice to help you:
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-5 lg:grid-cols-3">
+          {[
+            {
+              title: "Understand your growth areas",
+              description: "Take a guided assessment to identify where you need most improvement.",
+              icon: "📊"
+            },
+            {
+              title: "Learn practical traits",
+              description: "Short lessons explain core human qualities in clear, actionable ways.",
+              icon: "📚"
+            },
+            {
+              title: "Practice daily improvement",
+              description: "Simple exercises help you build better habits and behaviors.",
+              icon: "🏋️"
+            }
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.025))] p-7"
+            >
+              <div className="text-2xl">{item.icon}</div>
+              <h3 className="mt-4 text-2xl font-semibold text-white">
+                {item.title}
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-white/62">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -627,6 +674,7 @@ export default function HomePage() {
 
       <Header />
       <Hero />
+      <ProductExplanationSection />
       <MissionSection />
       <HowItWorksSection />
       <CapabilitySection />
