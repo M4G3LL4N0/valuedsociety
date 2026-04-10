@@ -182,33 +182,45 @@ function Hero() {
             </div>
 
             <h1 className="mx-auto mt-8 max-w-5xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-[6.1rem]">
-              Build the traits that make you
+              Become someone others
               <span className="block bg-[linear-gradient(90deg,#f7d7c3_0%,#f7b07a_38%,#ef835f_72%,#d8a1ff_100%)] bg-clip-text text-transparent">
-                more valuable in real life
+                trust, respect, and rely on
               </span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              ValuedSociety is structured education for human betterment — helping you develop the practical traits that improve your relationships, judgment, and contribution to the world around you.
+              ValuedSociety is a structured system for practical human betterment. Through assessment, education, and daily practice, we help you develop core traits like patience, understanding, and reliability that improve every part of life.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {[
+                "Better communication",
+                "Stronger relationships", 
+                "Improved judgment",
+                "Calmer reactions",
+                "Deeper understanding",
+                "Greater contribution"
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium text-white/82"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-col items-center gap-4">
               <a
                 href="#waitlist"
                 className="rounded-full bg-[linear-gradient(135deg,#f5a56b_0%,#ef7d7c_48%,#ad84ff_100%)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(195,119,255,0.26)] transition hover:scale-[1.02]"
               >
-                Join Waitlist
+                Join Waitlist - Limited Early Access
               </a>
-              <a
-                href="#product"
-                className="rounded-full border border-white/12 bg-white/[0.05] px-7 py-3.5 text-sm font-semibold text-white/90 backdrop-blur transition hover:bg-white/[0.09]"
-              >
-                See How It Works
-              </a>
+              <p className="max-w-2xl text-center text-sm text-white/50">
+                ValuedSociety combines assessment, daily lessons, and practical exercises to help you become more grounded, trustworthy, and valuable in your relationships and community.
+              </p>
             </div>
-            <p className="mt-4 text-sm text-white/50">
-              Early access spots are limited. Join now to secure your place.
-            </p>
 
             <div className="mt-14 grid gap-4 md:grid-cols-4">
               {PROOF_ITEMS.map((item) => (
@@ -233,10 +245,10 @@ function ProductExplanationSection() {
       <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,31,0.92),rgba(7,12,23,0.98))] p-6 md:p-8">
         <div className="max-w-3xl">
           <h2 className="text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            Structured education for practical human betterment
+            A complete system for measurable growth
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/65">
-            ValuedSociety is a structured system for practical human betterment. Through assessment, education, and daily practice, we help you:
+            Unlike generic self-help, ValuedSociety provides a structured path to improvement through assessment, daily lessons, and practical exercises. Here's how it works:
           </p>
         </div>
 
