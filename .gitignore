@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .aider*
+
+# local tool cache artifacts
+.aider.tags.cache.v4/
